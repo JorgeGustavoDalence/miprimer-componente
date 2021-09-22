@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Estado from './components/Estado';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './components/styles/App.css'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    
+      <Estado Venta de celulares
+    Catalogo grande de celulares
+    />
+
+     );
 }
+<body>
+<div className="bg-dark">
+    <h1 className="display-4 font-italic">Venta de celulares</h1>
+    <p className="lead my-3">Catalogo grande de celulares</p>
+  </div>
+
+</body>
 
 export default App;
+
