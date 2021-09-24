@@ -1,12 +1,11 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import{ Navbar,Nav,Form,Button,NavDropdown,FormControl } from 'react-bootstrap'
-
+import{ Navbar,Nav,Form,Button,NavDropdown,FormControl,Dropdown,ButtonGroup} from 'react-bootstrap'
 
 const Estado = () => {
     return( 
-
-      <Navbar bg="light" expand="lg">
+     <>
+      <Navbar bg="secondary" expand="lg">
       <Navbar.Brand href="#">CELUTIENDA</Navbar.Brand>
       <Navbar.Toggle aria-controls="navbarScroll" />
       <Navbar.Collapse id="navbarScroll">
@@ -27,6 +26,7 @@ const Estado = () => {
             
           </Nav.Link>
         </Nav>
+        
         <Form className="d-flex">
           <FormControl
             type="search"
@@ -34,10 +34,26 @@ const Estado = () => {
             className="mr-2"
             aria-label="Search"
           />
-          <Button variant="outline-success">Buscar</Button>
+          <Button variant="outline-danger">Buscar</Button>
         </Form>
+       
       </Navbar.Collapse>
     </Navbar>
+
+                                    {/* MENU DESPLEGABLE */}
+
+    <Dropdown as={ButtonGroup}>
+  <Button variant="dark">Marcas disponibles</Button>
+
+  <Dropdown.Toggle split variant="danger" id="dropdown-split-basic" />
+
+  <Dropdown.Menu>
+    <Dropdown.Item href="#/action-1">Samsung</Dropdown.Item>
+    <Dropdown.Item href="#/action-2">iPhone</Dropdown.Item>
+    <Dropdown.Item href="#/action-3">Motorola</Dropdown.Item>
+  </Dropdown.Menu>
+</Dropdown>
+     </>
 
     )
 }
