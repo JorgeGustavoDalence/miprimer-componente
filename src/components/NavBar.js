@@ -1,11 +1,11 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import{ Navbar,Nav,Form,Button,NavDropdown,FormControl,Dropdown,ButtonGroup} from 'react-bootstrap'
-
-const Estado = () => {
+import{ Navbar,Nav,NavDropdown} from 'react-bootstrap'
+import CartWidget from './CartWidget'
+const NavBar = () => {
     return( 
      <>
-      <Navbar bg="secondary" expand="lg">
+      <Navbar bg="success" expand="lg">
       <Navbar.Brand href="#">CELUTIENDA</Navbar.Brand>
       <Navbar.Toggle aria-controls="navbarScroll" />
       <Navbar.Collapse id="navbarScroll">
@@ -26,23 +26,9 @@ const Estado = () => {
             
           </Nav.Link>
         </Nav>
-        
-        <Form className="d-flex">
-          <FormControl
-            type="search"
-            placeholder="Buscar"
-            className="mr-2"
-            aria-label="Search"
-          />
-          <Button variant="outline-danger">Buscar</Button>
-        </Form>
-       
-      </Navbar.Collapse>
-    </Navbar>
+                                       {/* PARA POSIBLE USO FUTURO
 
-                                    {/* MENU DESPLEGABLE */}
-
-    <Dropdown as={ButtonGroup}>
+        <Dropdown as={ButtonGroup}>
   <Button variant="dark">Marcas disponibles</Button>
 
   <Dropdown.Toggle split variant="danger" id="dropdown-split-basic" />
@@ -53,9 +39,24 @@ const Estado = () => {
     <Dropdown.Item href="#/action-3">Motorola</Dropdown.Item>
   </Dropdown.Menu>
 </Dropdown>
+        
+        <Form className="d-flex">
+          <FormControl
+            type="search"
+            placeholder="Buscar"
+            className="mr-2"
+            aria-label="Search"
+          />
+          <Button variant="outline-danger">Buscar</Button>
+          
+        </Form>
+                                       */}
+       <CartWidget/>                                  
+      </Navbar.Collapse>
+</Navbar>
      </>
-
+     
     )
 }
 
-export default Estado;
+export default NavBar;

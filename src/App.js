@@ -1,34 +1,63 @@
 import React from 'react';
-import Estado from './components/Estado';
+import NavBar from './components/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/styles/App.css';
-import Cart from './components/Cart'
+import {Row,Container,Col,Card} from 'react-bootstrap'
+import ItemListContainer from "./components/ItemListContainer";
+import ItemCount from "./components/ItemCount";
 
 function App() {
+  
+  const product = {
+    id: 1,
+    item: "Celular",
+    details: "informacion detallada",
+    stock: 20,
+    initial: 1,
+    onAdd: (stock,cantidad) => {
+      alert(`Se agregarán ${cantidad} unidades al carrito`)
+      return stock-cantidad
+    },
+    precio: 100,
+  };
   return (
     <>
-     <div className="App">
-       <div className="Container-fluid bg-light">
-          <header>
-          <div className="text-sm-end bg-secondary">
-           <Cart numero={5}></Cart>
-           </div>
-            <Estado/>
-          </header>
-       </div>
-
-        <div className="jumbotron p-8 p-md-5 text-white rounded bg-dark">
-          <div className="col-md-12 px-0">
-            <h1 className="display-1 font-italic text-center text-danger">Venta de celulares</h1>
-            <p className="lead my-1 text-center text-white">Catalogo grande de celulares</p>
-           
-                     </div>
-        </div>    
-      </div>
+      {/* DESAFIO 2  */}
+      <Container fluid>
+        <header>
+          <NavBar />
+        </header>
+       </Container>
+      
+      {/* DESAFIO 04  */}
+      <Container className="d-flex justify-content-center">
+        <Row>
+          <Col md="6">
+            {/* Desafio 04 */}
+            <Card>
+              <h1>Venta de Celulares</h1>
+              <Card.Img variant="top" src="https://i.blogs.es/addc23/samsung-galaxy-s10/1366_2000.jpg"/>
+              <Card.Body>
+                <Card.Title>Samsung Galaxy S10</Card.Title>
+                <Card.Text>
+                Galaxy S10 incorpora el último procesador Exynos, 8 GB de memoria RAM y una pantalla AMOLED Infinity-O con resolución 2K+, así como una triple cámara trasera.
+                <strong><p>PRECIO: $80.000</p> </strong>
+               
+                </Card.Text>
+                
+                <ItemCount props={product} /> {/* Desafio 04 */}
+              </Card.Body>
+            </Card>
+          </Col>
+          <Col md="6">
+            {/* Desafio 03 */}
+            <ItemListContainer greeting="SALUDOS!" />{" "}
+          </Col>
+        </Row>
+      </Container>
     </>
-    );
-
-  }
+  );
+}
 
 export default App;
-
+ 
