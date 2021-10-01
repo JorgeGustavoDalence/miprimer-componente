@@ -1,0 +1,30 @@
+[
+    {
+        "id": 123132,
+        "nombre": "Samsung A32",
+        "cantidad": 6,
+        "descripcion": "Pantalla 6,4 RAM, 4GB, Almacenamiento 128GB",
+        "url": "https://www.cetrogar.com.ar/media/catalog/product/t/e/te2715.jpg?width=500&height=500&canvas=500:500&quality=80&bg-color=255,255,255&fit=bounds"
+    },
+    {
+          "id":13231,
+          "nombre": "Samsung Galaxy S20",
+          "cantidad": 11,
+          "descripcion": "Pantalla 6,7 RAM 16GB, Almacenamiento 128GB",
+          "url": "https://www.cetrogar.com.ar/media/catalog/product/t/e/te2602_2.jpg?width=500&height=500&canvas=500:500&quality=80&bg-color=255,255,255&fit=bounds"
+    },
+    {
+          "id": 53252,
+          "nombre": "Huawei P30 Pro",
+          "cantidad":14,
+          "descripcion":"Pantalla 6,7 RAM 16GB, Almacenamiento 128GB",
+          "url": "https://icdn.dtcn.com/image/digitaltrends_es/huawei-p30-pro-review-6v2-720x480.jpg"
+    },
+    {
+        "id": 75675,
+        "nombre": "Asus Zentone 6",
+        "cantidad": 17,
+        "descripcion": "Pantalla 6,7 RAM 16GB, Almacenamiento 32GB",
+        "url": "https://icdn.dtcn.com/image/digitaltrends_es/asus-zenfone-6-hands-on-2-720x480.jpg"
+    }
+    ]

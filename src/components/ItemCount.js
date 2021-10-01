@@ -24,6 +24,15 @@ function ItemCount(props) {
   
   }, [actualStock]);
 
+  const agregarAlCarrito = () => {
+    if ( count > 0 && count <= stock){
+        alert("SE AGREGARON TODOS LOS ITEMS ELEGIDOS AL CARRITO");
+    }
+    else{
+        alert("NO SE AGREGARON ITEMS AL CARRITO");
+    }
+}
+
   return (
     <div>
       <p>Cantidad disponible: {actualStock}</p>
