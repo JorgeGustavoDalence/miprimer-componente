@@ -7,15 +7,12 @@ function ItemListContainer() {
   const [productList, setproductList] = useState(0);
 
   useEffect(() => {
-    // Instanciamos una promesa que se resolverá en 2 segundos
-    // jalando los datos del archivo laptops.json
     const ackData = new Promise((resolve, reject) => {
       setTimeout(function () {
         resolve(celuData);
       }, 2000);
     });
 
-    // Cuando la promesa sea "resolve" entonces ejecutará la función...
     ackData.then((response) => {
       setproductList(response);
     });

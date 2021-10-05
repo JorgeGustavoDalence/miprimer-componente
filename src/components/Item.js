@@ -1,39 +1,29 @@
-import ItemCount from './ItemCount'
-import { Card } from 'react-bootstrap';
+import { Card, Badge, Container } from "react-bootstrap";
+// import ItemCount from "./ItemCount";
+import ItemDetailContainer from "./ItemDetailContainer";
 
 function Item(props) {
+  const { nombre, precio, url } = props.props;
 
-    const { id, nombre, cantidad, descripcion, url } = props.props;
-    const product = {
-      stock: cantidad,
-      initial: 1,
+  return (
+    <div>
+       <Container>
 
-      onAdd: (stock, cantidad) => {
-        alert(`Se agregarán ${cantidad} unidades al carrito`);
-        return stock - cantidad;
-      }
-    }
-
-    return(
-    <> 
-    <Card>
-        <Card.Img variant="top" src={url}/>
-        <Card.Body>
-            <Card.Title>{nombre}</Card.Title>
-            <Card.Text>
-                <span style={{ textAlign: "center" }}>
-               {id}
-                </span>
-                <br />
-                <span>{cantidad}</span>
-                <br />
-                <span>{descripcion}</span>
-            </Card.Text>
-            <ItemCount props={product} /> {/* Desafio 04 */}
+       <Card>
+       <Card.Img variant="top" src={url} width="60%" />
+       <Card.Body>
+          <Card.Title>{nombre}</Card.Title>
+          <Card.Text style={{ textAlign: "center" }}>
+            <Badge bg="success">Precio: {precio}</Badge>
+          </Card.Text>
+          <ItemDetailContainer props={props.props} />
         </Card.Body>
-    </Card>
-    </>
-    )
+      </Card>
+   
+</Container>
+</div>
+ );
 }
+
 
 export default Item;
