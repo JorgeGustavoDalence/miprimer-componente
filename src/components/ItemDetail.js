@@ -1,8 +1,8 @@
-import { Modal, Card, Badge } from 'react-bootstrap';
-import ItemCount from './ItemCount'
+import { Modal, Card, Badge } from "react-bootstrap";
+import ItemCount from "../components/ItemCount";
 
 const ItemDetail = (props) => {
-  const { id, nombre, descripcion, stock, precio, url } = props.props;
+  const { precio, title, stock, url, descripcion, id } = props.props;
   const product = {
     stock: stock,
     initial: 1,
@@ -10,16 +10,16 @@ const ItemDetail = (props) => {
       alert(`Se agregarán ${cantidad} unidades al carrito`);
       return stock - cantidad;
     },
-    precio: precio
+    precio: precio,
   };
 
   return (
     <>
       <Modal.Header closeButton>
-        <Modal.Title>{nombre}</Modal.Title>
+        <Modal.Title>{title}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <Card>
+        <Card> 
           <Card.Img variant="top" src={url} width="80%" />
           <Card.Body>
             <Card.Text>
@@ -33,7 +33,7 @@ const ItemDetail = (props) => {
                 <Badge bg="danger">Precio: ${precio}</Badge>
               </span>
             </Card.Text>
-            <ItemCount props={product} />
+            <ItemCount props={product} /> {/* <-- Entregable 04 */}
           </Card.Body>
         </Card>
       </Modal.Body>

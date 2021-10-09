@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import ItemList from "./ItemList";
-import celuData from '../assets/Data/celu.json'
-import { Row, Col } from 'react-bootstrap';
+import celuData from "../assets/Data/celu.json";
+import { Row, Col, Container } from "react-bootstrap";
 
 function ItemListContainer() {
   const [productList, setproductList] = useState(0);
@@ -20,15 +20,17 @@ function ItemListContainer() {
 
   return (
     <>
-      <Row className="item-list-container">
-        <Col md={12} className="d-flex justify-content-center">
-          <ItemList items={productList} />
-        </Col>
-      </Row>
+      <Container>
+        <div md={4} className="d-flex justify-content-center">
+          <Row className="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <Col>
+              <ItemList items={productList} />
+            </Col>
+          </Row>
+        </div>
+      </Container>
     </>
   );
 }
 
-  
-  
-  export default ItemListContainer;
+export default ItemListContainer;

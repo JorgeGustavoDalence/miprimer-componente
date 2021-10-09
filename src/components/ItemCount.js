@@ -2,9 +2,8 @@ import { useState } from "react";
 import { InputGroup, Button, FormControl } from "react-bootstrap";
 
 function ItemCount(props) {
-
   const { stock, initial, onAdd } = props.props;
-  
+
   // Inicializamos los hooks y pasamos variables
   const [cantidad, setCantidad] = useState(initial);
   const [actualStock, setActualStock] = useState(stock);

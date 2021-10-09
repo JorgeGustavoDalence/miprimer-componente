@@ -1,15 +1,17 @@
-import React from 'react'
-import { FaShoppingCart } from "react-icons/fa";
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { CgShoppingCart } from "react-icons/cg";
 
-function CartWidget() {
+const CartWidget = (props) => {
+  const { number } = props;
   return (
-    <div className="cart-item-list">
-      {" "}
-      Carrito:  {" "}
-      <FaShoppingCart />
-      &nbsp;{" "}
-    </div>
+    <>
+      <button className="btn btn-info">
+        <CgShoppingCart />
+        {number}
+      </button>
+    </>
   );
-}
+};
 
 export default CartWidget;

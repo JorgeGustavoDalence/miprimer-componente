@@ -1,6 +1,6 @@
-import { Modal, Button } from 'react-bootstrap';
-import { useState } from 'react';
-import ItemDetail from './ItemDetail'
+import { Modal, Button } from "react-bootstrap";
+import { useState } from "react";
+import ItemDetail from "./ItemDetail";
 
 const ItemDetailContainer = (props) => {
   const [show, setShow] = useState(false);
@@ -9,7 +9,7 @@ const ItemDetailContainer = (props) => {
 
   return (
     <>
-      <Button variant="warning" onClick={handleShow} style={{width: "100%"}}>
+      <Button variant="warning" onClick={handleShow} style={{ width: "100%" }}>
         Más informacion
       </Button>
       <Modal show={show} onHide={handleClose}>
