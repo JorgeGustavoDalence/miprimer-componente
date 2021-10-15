@@ -4,7 +4,7 @@ import NavBar from "../NavBar";
 import ItemListContainer from "../ItemListContainer";
 import ItemDetailContainer from "../ItemDetailContainer";
 import Cart from '../Cart';
-import Footer from '../Footer';
+import Footer from '../footer';
 
 
 
