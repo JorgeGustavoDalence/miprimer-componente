@@ -1,63 +1,26 @@
-import { useState } from "react";
-import { InputGroup, Button, FormControl } from "react-bootstrap";
+import React, { Fragment, useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
 
-function ItemCount(props) {
-  const { stock, initial, onAdd } = props.props;
+const ItemCount = ({stock,initial, onAdd}) =>{
 
-  // Inicializamos los hooks y pasamos variables
-  const [cantidad, setCantidad] = useState(initial);
-  const [actualStock, setActualStock] = useState(stock);
+    const [value,setValue] = useState(initial)
 
-  // Logica de suma y resta
-  const add = () => {
-    if (cantidad <= stock - 1) {
-      setCantidad(cantidad + 1);
-    }
-  };
+    const add = (value) => value < stock ? (setValue(value+1)) : console.log("limite de stock");
 
-  const substract = () => {
-    if (cantidad > initial) {
-      setCantidad(cantidad - 1);
-    }
-  };
+    const substract = (value) => value <= stock && value > initial ? (setValue(value-1)) : console.log ("limite es 0");
 
-  return (
-    <>
-      <span>Cantidad disponible: {actualStock}</span>
-      <InputGroup className="mb-3 form-calculator-minmax">
-        <Button
-          variant="outline-secondary"
-          id="button-addon1"
-          onClick={substract}
-        >
-          -
-        </Button>
-        <FormControl
-          aria-label="Example text with button addon"
-          aria-describedby="basic-addon1"
-          value={cantidad}
-          readOnly
-        />
-        <Button variant="outline-secondary" id="button-addon1" onClick={add}>
-          +
-        </Button>
-      </InputGroup>
-      {/* Entrega 04 -->
-        Se aplica la función onAdd importada para reducir el stock actual y simular que se agrega al carrito 
-        */}
-      <Button
-        variant="primary"
-        onClick={() => {
-          actualStock >= cantidad &&
-            setActualStock(onAdd(actualStock, cantidad));
-          cantidad > actualStock &&
-            alert("No queda más stock, no se puede agregar al carrito!");
-        }}
-      >
-        Agregar al carrito
-      </Button>
-    </>
-  );
+    return (
+        <Fragment>
+            <div className="my-2">
+                <div className="btn-group">
+                    <button className="btn btn-outline-light" type="button" onClick={() => substract(value)}>-</button>
+                    <h5 className="mx-5 btn btn-outline-light">{value}</h5>
+                    <button className="btn btn-outline-light" type="button" onClick={() => add(value)}>+</button>
+                </div>
+            </div>
+            <button className="my-1 px-4 btn btn-outline-light" type="button" onClick={() => onAdd(value)}>Añadir al carrito</button>
+        </Fragment>
+    )
 }
 
 export default ItemCount;

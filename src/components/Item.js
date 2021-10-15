@@ -1,25 +1,25 @@
-import { Card, Badge, Container } from "react-bootstrap";
-import ItemDetailContainer from "./ItemDetailContainer";
+import React, {Fragment} from 'react'
+import { Link } from 'react-router-dom';
 
-function Item(props) {
-  const { title, precio, url } = props.props;
+const Item = ({product}) =>{
 
-  return (
-    <Container>
-      <div className="d-flex col-md-12 mb-4 mb-md-0 center">
-        <Card>
-          <Card.Img variant="top" src={url} width="60%" />
-          <Card.Body>
-            <Card.Title>{title}</Card.Title>
-            <Card.Text style={{ textAlign: "center" }}>
-              <Badge bg="success">Precio: {precio}</Badge>
-            </Card.Text>
-            <ItemDetailContainer props={props.props} />
-          </Card.Body>
-        </Card>
-      </div>
-    </Container>
-  );
+    return (
+        <Fragment className="grilla">
+            <div className="card m-4">
+                <img src={product.imgUrl} className="card-img-top" alt={product.title} />
+                <div className="card-body">
+                    <h5 className="card-title">
+                        {product.title} - {product.descripcion}
+                    </h5>
+                    <li className="list-group-item m-2">Stock: {product.stock}</li>
+                    <li className="list-group-item m-2">$ {product.precio}</li>
+                    <Link to={`/item/${product.id}`} className="btn btn-primary">
+                        Mas Informacion
+                    </Link>
+                </div>
+            </div>
+        </Fragment>
+    )
 }
 
 export default Item;

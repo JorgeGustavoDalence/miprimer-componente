@@ -1,18 +1,21 @@
+import React from 'react';
 import Item from './Item';
 import { Spinner } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-
-function ItemList({ items }) {
-    return (
-      <>
-        {items.length ? (
-          items.map((elem, idx) => <Item props={elem} key={idx} />)
-        ) : (
-          <Spinner animation="border" variant="primary" />
-        )}
-      </>
-    );
-  }
-  
+const ItemList = ({product}) =>{
+    
+    console.log(product);
+    
+    return(
+        <div className="text-center">
+            {product.length ? (
+                product.map((product) => <Item product={product} />)
+            ) : (
+                <Spinner className="my-4" animation="border" variant="primary" />
+            )}
+        </div>
+    )
+}
 
 export default ItemList;

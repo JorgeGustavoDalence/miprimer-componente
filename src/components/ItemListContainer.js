@@ -1,36 +1,45 @@
-import React, { useState, useEffect } from "react";
-import ItemList from "./ItemList";
-import celuData from "../assets/Data/celu.json";
-import { Row, Col, Container } from "react-bootstrap";
+import React, { useState, useEffect } from 'react'
+import ItemList from './ItemList'
+import 'bootstrap/dist/css/bootstrap.css';
+import './styles/ItemListContainer.css'
+import CeluData  from '../assets/Data/CeluData.json';
+import { useParams } from "react-router-dom";
 
-function ItemListContainer() {
-  const [productList, setproductList] = useState(0);
+const ItemListContainer = () => {
+    const [products,setProducts] = useState([])
+    const { id: idCategory } = useParams();
 
-  useEffect(() => {
-    const ackData = new Promise((resolve, reject) => {
-      setTimeout(function () {
-        resolve(celuData);
-      }, 2000);
-    });
+    useEffect(() => {
+        const getItems = () => {
+        return new Promise((res,rej) => {
+            setTimeout(() => {
+                if (idCategory) {
+                    const filtroCategory = CeluData.filter(
+                        (item) => item.categoria === idCategory
+                    );
+                    res(filtroCategory);
+                } else {
+                    res(CeluData);
+                }
 
-    ackData.then((response) => {
-      setproductList(response);
-    });
-  }, []);
+                rej('Error al traer productos');
+            }, 2000);
+        });
+    };
+        getItems()
+            .then((res) => setProducts(res))
+            .catch((Error) => console.log(Error));
+    }, [idCategory]);
+    
 
-  return (
-    <>
-      <Container>
-        <div md={4} className="d-flex justify-content-center">
-          <Row className="col-lg-6 col-md-12 mb-4 mb-md-0">
-            <Col>
-              <ItemList items={productList} />
-            </Col>
-          </Row>
+    return (
+        <div className="container">
+            <ul className="grilla">
+                <ItemList product={products} />
+            </ul>
         </div>
-      </Container>
-    </>
-  );
+    ) 
+
 }
 
 export default ItemListContainer;
