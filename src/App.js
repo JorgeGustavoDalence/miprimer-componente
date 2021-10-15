@@ -10,7 +10,7 @@ const App = () => {
   return (
 
         <ProviderCustomizado>
-            <AppRoutes/>
+            <AppRoutes />
         </ProviderCustomizado>
         
     );
