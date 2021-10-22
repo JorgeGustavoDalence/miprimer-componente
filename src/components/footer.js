@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const Footer = () => {
   return (
     <>
@@ -28,7 +27,7 @@ const Footer = () => {
                 <br />
                 Villa Luro, CABA
                 <br />
-                <abbr title="Phone">P:</abbr> (54 9) 1121679374  
+                <abbr title="Phone">P:</abbr> (54 9) 1121679374
               </address>
             </div>
           </div>
@@ -39,7 +38,6 @@ const Footer = () => {
           style={{ backgroundColor: "#222", color: "#fff" }}
         >
           © 2021 Copyright:
-          
         </div>
       </footer>
     </>

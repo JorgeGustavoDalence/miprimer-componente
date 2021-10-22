@@ -8,8 +8,8 @@
 }
 
 body{
-  background-color: black;
-  margin: border red;
+  background-color: white;
+ 
 }
 
 .fotos{
@@ -21,7 +21,11 @@ body{
   justify-content: left;
 }
 #root{
-  background-color: black;
+  background-color: white;
 }
+
+.main-container{height:1500px}
+.container h1{font-size:3rem;}
+
 
 
