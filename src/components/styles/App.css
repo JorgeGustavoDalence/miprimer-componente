@@ -8,7 +8,7 @@
 }
 
 body{
-  background-color: white;
+  background-color: black;
  
 }
 
@@ -21,7 +21,7 @@ body{
   justify-content: left;
 }
 #root{
-  background-color: white;
+  background-color: black;
 }
 
 .main-container{height:1500px}

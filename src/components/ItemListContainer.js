@@ -1,41 +1,60 @@
 import React, { useState, useEffect } from "react";
 import ItemList from "./ItemList";
-import "bootstrap/dist/css/bootstrap.css";
-import "./styles/ItemListContainer.css";
-import CeluData from "../assets/Data/CeluData.json";
 import { useParams } from "react-router-dom";
+import {firestore} from "../firebase";
 
 const ItemListContainer = () => {
-  const [products, setProducts] = useState([]);
+  const [products,setProducts] = useState([])
   const { id: idCategory } = useParams();
-
+  console.log(idCategory);
+  
   useEffect(() => {
-    const getItems = () => {
-      return new Promise((res, rej) => {
-        setTimeout(() => {
-          if (idCategory) {
-            const filtroCategory = CeluData.filter(
-              (item) => item.categoria === idCategory
-            );
-            res(filtroCategory);
-          } else {
-            res(CeluData);
-          }
 
-          rej("Error al traer productos");
-        }, 2000);
-      });
-    };
-    getItems()
-      .then((res) => setProducts(res))
-      .catch((Error) => console.log(Error));
-  }, [idCategory]);
+      const db = firestore
+
+      const coleccion = db.collection("celuData")
+      if (idCategory === undefined ) {
+          const consulta = coleccion.get()
+          consulta.then((resultado) => {
+              const ArrayProductos = []
+              resultado.docs.forEach(producto => {
+                  const producto_final = {
+                      id: producto.id,
+                      ...producto.data()
+                  }
+                  ArrayProductos.push(producto_final)
+              })
+              console.log(ArrayProductos);
+              setProducts(ArrayProductos)
+          })
+      } else {
+          const consulta = coleccion.where('categoria', '==', idCategory).get()
+          consulta.then((resultado) => {
+              const ArrayProductos = []
+              resultado.docs.forEach(producto => {
+                  const producto_final = {
+                      id: producto.id,
+                      ...producto.data()
+                  }
+                  ArrayProductos.push(producto_final)
+              })
+              console.log(ArrayProductos);
+              setProducts(ArrayProductos)
+          })
+      }
+  }, [idCategory])
+  
 
   return (
-    <div className="text-white text-center mt-5 d-flex justify-content-center row">
-      <ItemList product={products} />
-    </div>
-  );
-};
+      <div>
+        
+              <ItemList product={products} />
+        
+      </div>
+  ) 
 
-export default ItemListContainer;
+}
+
+export default ItemListContainer 
+ 
+
