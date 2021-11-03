@@ -6,6 +6,19 @@
   margin-left: 10px;
 }
 
+.title{
+  color: white;
+}
+.descripcion{
+  color: white;
+}
+.precio{
+  color: white;
+}
+.cantSelect{
+  color: green;
+}
+
 @media screen and (max-width: 390px){
   .image-product{
       width: 350px;
@@ -20,5 +33,17 @@
   }
   .item-detail-container{
       flex-direction: column;
+  }
+  .title{
+    color: white;
+  }
+  .descripcion{
+    color: white;
+  }
+  .precio{
+    color: white;
+  }
+  .cantSelect{
+    color: green;
   }
 }

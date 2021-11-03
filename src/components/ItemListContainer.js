@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import ItemList from "./ItemList";
+import 'bootstrap/dist/css/bootstrap.css';
+import  "./styles/ItemListContainer.css";
 import { useParams } from "react-router-dom";
 import { firestore } from "../Firebase";
-import 'bootstrap/dist/css/bootstrap.css';
-import  "./styles/ItemListContainer.css"
+
 
 
 const ItemListContainer = () => {
