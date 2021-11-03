@@ -3,7 +3,7 @@ import ItemList from "./ItemList";
 import 'bootstrap/dist/css/bootstrap.css';
 import  "./styles/ItemListContainer.css";
 import { useParams } from "react-router-dom";
-import { firestore } from "../Firebase";
+import {firestore} from "../Firebase/index";
 
 
 
