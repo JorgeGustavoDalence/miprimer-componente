@@ -4,14 +4,14 @@
   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073,
     0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
   text-transform: capitalize;
-  padding-bottom: 20px;
-  padding-top: 100px;
+  padding-bottom: 30px;
+  padding-top: 30px;
 }
-body{
+body {
   background-color: black;
 }
 
-#root{
+#root {
   background-color: black;
 }
 
@@ -24,20 +24,16 @@ body{
   justify-content: left;
 }
 
-
 .contenido {
-  padding-bottom: 100px;
+  padding-bottom: 20px;
 }
 
-.fotoUno {
-  padding: 50px;
-}
 .App-header {
   background-color: #282c34;
   min-height: 50vh;
   display: flex;
   flex-direction: column;
-  align-items:stretch;
+  align-items: stretch;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;

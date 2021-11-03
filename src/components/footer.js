@@ -10,10 +10,9 @@ const Footer = () => {
             <div className="col-lg-6 col-md-12 mb-4 mb-md-0 text-start">
               <h5 className="text-uppercase">Sobre Nosotros</h5>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste
-                atque ea quis molestias. Fugiat pariatur maxime quis culpa
-                corporis vitae repudiandae aliquam voluptatem veniam, est atque
-                cumque eum delectus sint!
+                TIENDACELU es una tienda que se dedica a la venta online de
+                celulares, un negocio reciente, pronto dispondremos de mas
+                productos, accesorios, etc.
               </p>
             </div>
 
@@ -23,11 +22,11 @@ const Footer = () => {
               <address>
                 <strong>CeluTienda.srl</strong>
                 <br />
-                Avenida Gaona 4356
-                <br />
                 Villa Luro, CABA
                 <br />
-                <abbr title="Phone">P:</abbr> (54 9) 1121679374
+                tiendacelu@gmail.com
+                <br />
+                <abbr title="Phone"></abbr> (54 9) 1121679374
               </address>
             </div>
           </div>
@@ -37,6 +36,7 @@ const Footer = () => {
           className="text-center p-3"
           style={{ backgroundColor: "#222", color: "#fff" }}
         >
+          {" "}
           © 2021 Copyright:
         </div>
       </footer>

@@ -1,16 +1,13 @@
 import React, { useState, useEffect } from "react";
 import ItemList from "./ItemList";
-import 'bootstrap/dist/css/bootstrap.css';
-import  "./styles/ItemListContainer.css";
+import "bootstrap/dist/css/bootstrap.css";
+import "./styles/ItemListContainer.css";
 import { useParams } from "react-router-dom";
-import {firestore} from "../firebase/index";
-
-
+import { firestore } from "../firebase/index";
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
   const { id: idCategory } = useParams();
- 
 
   useEffect(() => {
     const db = firestore;
@@ -46,12 +43,11 @@ const ItemListContainer = () => {
   }, [idCategory]);
 
   return (
-    <div className="container">
-    
-    <ul className="grilla">
+    <>
+      <ul className="grilla">
         <ItemList product={products} />
-    </ul>
-</div>
+      </ul>
+    </>
   );
 };
 

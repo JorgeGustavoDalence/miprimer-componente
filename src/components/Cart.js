@@ -1,7 +1,7 @@
 import { CartContext } from "./CartContext";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import RegistrarCompra from "./RegistrarCompra"
+import RegistrarCompra from "./RegistrarCompra";
 import { ListGroup, ListGroupItem, Button } from "react-bootstrap";
 
 function Cart(props) {
@@ -60,18 +60,20 @@ function Cart(props) {
               </div>
             );
           })}
-          
-          <Link className={"btn btn-warning m-2"} to={"/"}>
-            {" "}
-            Seguir Comprando
-          </Link>
-          {carrito.length > 0 && <button className={'btn btn-danger m-2'} onClick={removeAll}>BORRAR TODO</button>}
-                </ul>
-                <h3 className="text-light">Total: ${totalCarrito.reduce((prev, next) => prev + next)}</h3>
-                <Button variant="primary" onClick={handleShow} className={'m-3'}>
-                    Finalizar Compra
-                </Button>
-                <RegistrarCompra/>
+
+          {carrito.length > 0 && (
+            <button className={"btn btn-danger m-2"} onClick={removeAll}>
+              BORRAR TODO
+            </button>
+          )}
+        </ul>
+        <h3 className="text-light">
+          Total: ${totalCarrito.reduce((prev, next) => prev + next)}
+        </h3>
+        <Button variant="primary" onClick={handleShow} className={"m-3"}>
+          Finalizar Compra
+        </Button>
+        <RegistrarCompra />
       </div>
     );
   } else {
@@ -88,4 +90,3 @@ function Cart(props) {
 }
 
 export default Cart;
-

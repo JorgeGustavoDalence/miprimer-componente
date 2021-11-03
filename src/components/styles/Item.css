@@ -1,15 +1,15 @@
-.card-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.card{
-    align-items: center;
-    width: 18rem;
-    height: 42rem;
+.card {
+  align-items: center;
+  width: 18rem;
+  height: 42rem;
 }
 
 .card-img-top {
-    height: 24rem !important;
+  height: 24rem !important;
 }

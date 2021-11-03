@@ -27,10 +27,10 @@ function AppRoutes() {
         </Route>
         <Route exact path="/categoria/:id">
           <ItemListContainer />
-          </Route>
+        </Route>
         <Route exact path="/item/:id">
           <ItemDetailContainer />
-          </Route>
+        </Route>
         <Route exact path="/cart">
           <Cart />
         </Route>

@@ -10,9 +10,7 @@ const Item = ({ product }) => {
         <Card.Text>
           <Badge className="bg-dark">Stock: {product.stock}</Badge>
         </Card.Text>
-        <Link to={`/item/${product.id}`} className="btn btn-secondary">
-          Mas Informacion
-        </Link>
+        <Link to={`/item/${product.id}`} className="btn btn-secondary">Mas Informacion</Link>
       </Card.Body>
     </Card>
   );

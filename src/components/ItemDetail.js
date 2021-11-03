@@ -50,41 +50,35 @@ const ItemDetail = ({ product }) => {
     }
   };
 
-  let pathDefault = "/";
   let pathCart = "/Cart";
 
   if (product) {
     return (
-      <div className="container-fluid px-5">
-        <div className="item-detail-container">
-          <div className="image-container">
-            <img
-              src={product.imgUrl}
-              alt={product.title}
-              className={"image-product"}
-            />
-          </div>
-          <div className="description-container">
-            <h1 className="title">{product.title}</h1>
-            <h5 className="descripcion">Descripción: {product.descripcion}</h5>
-            <h5 className="precio">Precio: {product.precio}</h5>
-            {contadorDetail === 0 && (
-              <ItemCount stock={product.stock} initial={0} onAdd={onAdd} />
-            )}
-            {contadorDetail !== 0 && (
-              <Fragment className="contador">
-                <h5 className="cantSelect">
-                  Cantidad seleccionada: {contadorDetail}
-                </h5>
-                <Link className="btn btn-danger m-3" to={pathCart}>
-                  Terminar mi compra
-                </Link>
-              </Fragment>
-            )}
-            <Link className="btn btn-light m-5" to={pathDefault}>
-              Inicio
-            </Link>
-          </div>
+      <div className="item-detail-container">
+        <img
+          height="430"
+          width="530"
+          src={product.imgUrl}
+          alt={product.title}
+        />
+
+        <div className="description-container">
+          <h1 className="title">{product.title}</h1>
+          <h5 className="descripcion">Descripción: {product.descripcion}</h5>
+          <h5 className="precio">Precio: {product.precio}</h5>
+          {contadorDetail === 0 && (
+            <ItemCount stock={product.stock} initial={0} onAdd={onAdd} />
+          )}
+          {contadorDetail !== 0 && (
+            <Fragment className="contador">
+              <h5 className="cantSelect">
+                Cantidad seleccionada: {contadorDetail}
+              </h5>
+              <Link className="btn btn-danger m-3" to={pathCart}>
+                Terminar mi Compra
+              </Link>
+            </Fragment>
+          )}
         </div>
       </div>
     );
