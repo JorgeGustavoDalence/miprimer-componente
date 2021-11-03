@@ -1,37 +1,36 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Carousel } from "react-bootstrap";
 import "../components/styles/App.css";
 
 const Contenido = () => {
   return (
-    <>
-      <Container>
-        <Row>
-          <Col>
-            <ul className="fotos">
-              <li>
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcrStZUTHTUN8FwO342U--wunkKdjJ4cXAnBEXF1Yy2IfN_jkYZAd6zekR4omscEvV7MU&usqp=CAU"
-                  alt="logo huawei"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://i.pinimg.com/originals/cb/d4/1f/cbd41f7b15a61fe64c06502bacc8d6b6.jpg"
-                  alt="logo apple"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://cdn.redmondpie.com/wp-content/uploads/2014/04/Samsung-logo.png"
-                  alt="logo samsung"
-                />
-              </li>
-            </ul>
-          </Col>
-        </Row>
-      </Container>
-    </>
+    <header className="App-header">
+    <Carousel variant="dark">
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src="https://mooscle.com/app/uploads/2019/05/samsung_logo_black_background.png" height="500" width="1000" 
+      alt="logo samsung"
+    />
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src="https://img.unocero.com/2019/09/modo-oscuro-huawei.jpg" height="500" width="1000"
+      alt="logo huawei"
+    />
+   
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src="https://logos-marcas.com/wp-content/uploads/2020/07/Asus-Emblema.jpg" height ="500" width="1000"
+      alt="logo asus"
+    />
+ 
+  </Carousel.Item>
+</Carousel>
+</header>
   );
 };
 

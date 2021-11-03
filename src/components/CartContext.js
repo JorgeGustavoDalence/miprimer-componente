@@ -1,19 +1,33 @@
-import { createContext, useState } from "react";
-export const CartContext = createContext();
-const { Provider } = CartContext;
+import {createContext, useState} from "react";
+export const CartContext = createContext()
+const {Provider} = CartContext
 
-export const ProviderCustomizado = ({ children }) => {
-  const [carrito, setCarrito] = useState([]);
-  const [contador, setContador] = useState(0);
+export const ProviderCustomizado = ({children}) => {
 
-  const valorDelContexto = {
-    carrito,
-    setCarrito,
-    contador,
-    setContador,
-  };
+    const [carrito, setCarrito] = useState([]);
+    const [contador, setContador] = useState(0);
+    const [show, setShow] = useState(false);
 
-  return <Provider value={valorDelContexto}>{children}</Provider>;
-};
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
-export default CartContext;
+    const valorDelContexto = {
+        carrito,
+        setCarrito,
+        contador,
+        setContador,
+        show, 
+        setShow,
+        handleClose,
+        handleShow
+    }
+
+    return(
+        <Provider value={valorDelContexto}>
+            {children}
+        </Provider>
+    )
+}
+
+
+export default CartContext

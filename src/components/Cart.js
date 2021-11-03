@@ -1,10 +1,11 @@
 import { CartContext } from "./CartContext";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { ListGroup, ListGroupItem } from "react-bootstrap";
+import RegistrarCompra from "./RegistrarCompra"
+import { ListGroup, ListGroupItem, Button } from "react-bootstrap";
 
 function Cart(props) {
-  const { carrito, setCarrito, setContador, contador } =
+  const { carrito, setCarrito, setContador, contador, handleShow } =
     useContext(CartContext);
 
   const totalCarrito = [0];
@@ -59,19 +60,18 @@ function Cart(props) {
               </div>
             );
           })}
-          <h3 className="text-light">
-            Total: ${totalCarrito.reduce((prev, next) => prev + next)}
-          </h3>
+          
           <Link className={"btn btn-warning m-2"} to={"/"}>
             {" "}
             Seguir Comprando
           </Link>
-          {carrito.length > 0 && (
-            <button className={"btn btn-danger m-2"} onClick={removeAll}>
-              BORRAR TODO
-            </button>
-          )}
-        </ul>
+          {carrito.length > 0 && <button className={'btn btn-danger m-2'} onClick={removeAll}>BORRAR TODO</button>}
+                </ul>
+                <h3 className="text-light">Total: ${totalCarrito.reduce((prev, next) => prev + next)}</h3>
+                <Button variant="primary" onClick={handleShow} className={'m-3'}>
+                    Finalizar Compra
+                </Button>
+                <RegistrarCompra/>
       </div>
     );
   } else {
@@ -88,3 +88,4 @@ function Cart(props) {
 }
 
 export default Cart;
+

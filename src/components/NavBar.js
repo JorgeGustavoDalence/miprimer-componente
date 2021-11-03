@@ -1,14 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import CartWidget from "./CartWidget";
-import { useContext } from "react";
-import CartContext from "../components/CartContext";
 
 const NavBar = (props) => {
-  const { contador } = useContext(CartContext);
-
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid px-5">
@@ -37,19 +32,7 @@ const NavBar = (props) => {
                 Inicio
               </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink
-                activeClassName="active"
-                className="nav-link fontSize"
-                aria-current="page"
-                to={"/bestSellers"}
-              >
-                Contacto
-              </NavLink>
-            </li>
-
             <li className="nav-item dropdown">
-              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <a
                 className="nav-link dropdown-toggle fontSize"
                 id="navbarDropdownMenuLink"
@@ -57,7 +40,7 @@ const NavBar = (props) => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Marcas
+                Elegir Marcas
               </a>
               <ul
                 className="dropdown-menu"

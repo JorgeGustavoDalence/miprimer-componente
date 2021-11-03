@@ -4,8 +4,6 @@ import { Spinner } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const ItemList = ({ product }) => {
-  console.log(product);
-
   return (
     <div>
       {product.length ? (

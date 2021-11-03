@@ -6,6 +6,7 @@ import { Container } from "react-bootstrap";
 import ItemDetailContainer from "../ItemDetailContainer";
 import Cart from "../Cart";
 import Footer from "../footer";
+import Contenido from "../Contenido";
 
 function AppRoutes() {
   return (
@@ -14,6 +15,7 @@ function AppRoutes() {
         <Container fluid>
           <NavBar />
           <h1 className="celu">CELUTIENDA</h1>
+          <Contenido />
         </Container>
       </header>
 
@@ -25,10 +27,10 @@ function AppRoutes() {
         </Route>
         <Route exact path="/categoria/:id">
           <ItemListContainer />
-        </Route>
+          </Route>
         <Route exact path="/item/:id">
           <ItemDetailContainer />
-        </Route>
+          </Route>
         <Route exact path="/cart">
           <Cart />
         </Route>

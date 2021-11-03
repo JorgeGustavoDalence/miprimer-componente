@@ -1,0 +1,34 @@
+ul{
+    padding: 0;
+}
+.card {
+    margin: 2rem auto !important;
+    border: 2px solid #888f91;
+    border-radius: 10px;
+}
+
+.grilla {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media screen and (max-width: 1370px) {
+    .grilla {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .grilla {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .grilla {
+        grid-template-columns: 1fr;
+        display: block;
+    }
+
+}
