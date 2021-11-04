@@ -1,0 +1,110 @@
+[
+    { 
+        "id": 1,
+        "title": "Samsung A32",
+        "stock": 6,
+        "descripcion": "Pantalla 6,4 RAM, 4GB, Almacenamiento 128GB",
+        "precio":  50000,
+        "imgUrl": "https://www.cetrogar.com.ar/media/catalog/product/t/e/te2715.jpg?width=500&height=500&canvas=500:500&quality=80&bg-color=255,255,255&fit=bounds",
+        "categoria":"Samsung"
+    },
+    {
+          "id": 2,
+          "title": "Samsung Galaxy S20",
+          "stock": 11,
+          "descripcion": "Pantalla 6,7 RAM 16GB, Almacenamiento 128GB",
+          "precio": 90000,
+          "imgUrl": "https://www.cetrogar.com.ar/media/catalog/product/t/e/te2602_2.jpg?width=500&height=500&canvas=500:500&quality=80&bg-color=255,255,255&fit=bounds",
+        "categoria":"Samsung"
+    },
+  
+    {
+        "id": 3,
+        "title": "Huawei P30 Pro",
+        "stock":14,
+        "descripcion":"Pantalla 6,7 RAM 16GB, Almacenamiento 128GB",
+        "precio": 60000,
+        "imgUrl": "https://icdn.dtcn.com/image/digitaltrends_es/huawei-p30-pro-review-6v2-720x480.jpg",
+      "categoria":"Huawei"
+    },
+    {
+        "id": 4,
+        "title": "Asus Zentone 6",
+        "stock": 17,
+        "descripcion": "Pantalla 6,7 RAM 16GB, Almacenamiento 32GB",
+        "precio":  20000,
+        "imgUrl": "https://icdn.dtcn.com/image/digitaltrends_es/asus-zenfone-6-hands-on-2-720x480.jpg",
+        "categoria":"Asus"
+    },
+    {
+        "id": 5,
+        "title": "ASUS ZenFone 3 ",
+        "stock": 17,
+        "descripcion": "Zoom: dos cámaras, zoom 2.3X y batería de 5000 mAh",
+        "precio":  27000,
+        "imgUrl": "https://i.blogs.es/8c29ce/zenfone-3-zoom/1366_2000.jpg",
+        "categoria":"Asus"
+    },
+    {
+        "id": 6,
+        "title": "Samsung Galaxy A21s",
+        "stock": 19,
+        "descripcion": "Pantalla 5.3 RAM 4GB, Almacenamiento 128GB",
+        "precio": 40000,
+        "imgUrl": "https://images.fravega.com/f300/9a60072b1632a7114ff7f250e42f2d5d.jpg.webp",
+      "categoria":"Samsung"
+        },
+
+    {
+        "id": 7,
+        "title": "Huawei Y7",
+        "stock": 21,
+        "descripcion":"Pantalla 4,8 RAM 2GB, Almacenamiento 16GB",
+        "precio": 10000,
+        "imgUrl": "https://images.fravega.com/f300/9394a3e4eca1ab7708211b27090abb62.jpg.webp",
+      "categoria":"Huawei"
+    },
+    {
+    "id": 8,
+    "title": "Huawei P40 Lite",
+    "stock": 9,
+    "descripcion":"Pantalla 6.1 RAM 8GB, Almacenamiento 64GB",
+    "precio": 60000,
+    "imgUrl": "https://www.savol-javob.com/wp-content/uploads/2020/09/D84pzDTP4gBELPJgZgZPessKDh3TKTwZpqiwzWWQMKnkXb8inztCt5L7OJPo-300x300.jpeg",
+  "categoria":"Huawei"
+    },
+    {
+    "id": 9,
+    "title": "ASUS ZenFone 4",
+    "stock": 15,
+    "descripcion": "Pantalla 4.0 RAM 2GB, Almacenamiento 8GB",
+    "precio":  8000,
+    "imgUrl": "https://compararmovil.com/imagen/device/asus-zenfone-4-ze554kl-0/300x300",
+    "categoria":"Asus"
+    },
+    {
+        "id": 10,
+        "title": "Samsung Galaxy A50",
+        "stock": 13,
+        "descripcion": "Pantalla 5,3 RAM 6GB Almacenamiento 64GB",
+        "precio": 50000,
+        "imgUrl": "https://i.ebayimg.com/thumbs/images/g/epIAAOSwU0Rg8T4w/s-l300.jpg",
+        "categoria": "Samsung"
+    },
+    {  "id": 11,
+        "title": "Samsung Galaxy A70",
+        "stock": 33,
+        "descripcion": "Pantalla 6.1 RAM 8GB Almacenamiento 128GB",
+        "precio": 80000,
+        "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp3fkVdcaX-xpH05uk4238Xe2CreqTuNotgI9aYL25sfU9_QaYFcfLBM7q133IcJ66t5I&usqp=CAU",
+        "categoria": "Samsung"
+    },
+    {  "id": 12,
+        "title": "Huawei Y9",
+        "stock": 45,
+        "descripcion": "Pantalla 5.6 RAM 6GB Almacenamiento 64GB",
+        "precio": 45000,
+        "imgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp3fkVdcaX-xpH05uk4238Xe2CreqTuNotgI9aYL25sfU9_QaYFcfLBM7q133IcJ66t5I&usqp=CAU",
+        "categoria": "Huawei"
+    }
+    ]
