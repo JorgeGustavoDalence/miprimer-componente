@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import RegistrarCompra from "./RegistrarCompra";
 import { ListGroup, ListGroupItem, Button } from "react-bootstrap";
+import { CgShoppingCart } from "react-icons/cg";
 
 function Cart(props) {
   const { carrito, setCarrito, setContador, contador, handleShow } =
@@ -23,7 +24,10 @@ function Cart(props) {
     setCarrito(carritoProductos);
     let counter = 0;
     carritoProductos.map((item2) => {
-      counter += item2.cantidad;
+      return(
+        counter += item2.cantidad
+      )
+      
     });
 
     setContador(counter);
@@ -32,14 +36,14 @@ function Cart(props) {
   if (contador) {
     return (
       <div className="d-flex align-items-center flex-column">
-        <h1 className="text-success"> CARRITO </h1>
+        <h1 className="textocarrito"> CARRITO </h1>
         <ul>
           {carrito.map((item, index) => {
             const totalProducto = item.cantidad * item.precio;
             carritoProductos.push(item);
             totalCarrito.push(totalProducto);
             return (
-              <div>
+              <div className="carro">
                 <ListGroup horizontal key={index} className={"mt-3"}>
                   <ListGroupItem>{item.title}</ListGroupItem>
                   <ListGroupItem>
@@ -62,7 +66,7 @@ function Cart(props) {
           })}
 
           {carrito.length > 0 && (
-            <button className={"btn btn-danger m-2"} onClick={removeAll}>
+            <button className={"btn btn-danger m-2 center"} onClick={removeAll}>
               BORRAR TODO
             </button>
           )}
@@ -70,7 +74,7 @@ function Cart(props) {
         <h3 className="text-light">
           Total: ${totalCarrito.reduce((prev, next) => prev + next)}
         </h3>
-        <Button variant="primary" onClick={handleShow} className={"m-3"}>
+        <Button variant="warning" onClick={handleShow} className={"m-3"}>
           Finalizar Compra
         </Button>
         <RegistrarCompra />
@@ -79,7 +83,8 @@ function Cart(props) {
   } else {
     return (
       <div className="carroVacio">
-        <h1 className="text-light"> Carro vacío!</h1>
+        <CgShoppingCart className="cart m-1" />
+        <h1 className="text-light"> Carrito vacío!</h1>
         <Link className={"btn btn-warning m-2"} to={"/"}>
           {" "}
           Seleccionar productos{" "}

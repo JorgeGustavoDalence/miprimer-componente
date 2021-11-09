@@ -1,11 +1,12 @@
 .celu {
   text-align: center;
-  color: #e60073;
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073,
-    0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  color: #ffd000;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #bf9f11, 0 0 40px #bf9f11,
+    0 0 50px #bf9f11, 0 0 60px #bf9f11, 0 0 70px #bf9f11,  0 0 80px #bf9f11;
   text-transform: capitalize;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   padding-top: 30px;
+  background-color: black;
 }
 body {
   background-color: black;
@@ -19,22 +20,22 @@ body {
   display: grid;
   display: flex;
   grid-template-columns: auto;
-  gap: 60px;
-  padding-right: 200px;
+  gap: 20px;
+  padding-right: 100px;
   justify-content: left;
 }
 
 .contenido {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 50vh;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: static;
+  height: 300px;
+}
+.textocarrito{
+  color: #bf9f11;
+}
+.itemlist{
+  padding-top: 30px;
 }

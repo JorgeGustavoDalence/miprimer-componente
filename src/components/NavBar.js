@@ -7,7 +7,7 @@ const NavBar = (props) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid px-5">
-        <NavLink className="navbar-brand" to="/">
+        <NavLink className="navbar-brand text-warning" to="/">
           CELUTIENDA
         </NavLink>
         <button
@@ -33,7 +33,7 @@ const NavBar = (props) => {
               </NavLink>
             </li>
             <li className="nav-item dropdown">
-              <a
+              <a href
                 className="nav-link dropdown-toggle fontSize"
                 id="navbarDropdownMenuLink"
                 role="button"

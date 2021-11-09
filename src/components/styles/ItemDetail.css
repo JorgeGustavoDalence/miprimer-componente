@@ -1,5 +1,7 @@
 .item-detail-container {
   display: flex;
+  padding-top: 20px;
+  padding-left: 15px;
 }
 
 .description-container {
@@ -16,7 +18,7 @@
   color: white;
 }
 .cantSelect {
-  color: green;
+  color: #bf9f11;
 }
 
 @media screen and (max-width: 390px) {
@@ -45,5 +47,10 @@
   }
   .cantSelect {
     color: green;
+  }
+  .carro{
+    width: 350px;
+    height: 501px;
+
   }
 }

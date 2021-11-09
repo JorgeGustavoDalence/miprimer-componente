@@ -34,7 +34,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         </div>
       </div>
       <button
-        className="my-1 px-4 btn btn-outline-light"
+        className="my-1 px-4 btn btn-outline-warning"
         type="button"
         onClick={() => onAdd(value)}
       >

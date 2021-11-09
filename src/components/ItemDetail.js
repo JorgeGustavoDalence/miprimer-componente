@@ -50,7 +50,7 @@ const ItemDetail = ({ product }) => {
     }
   };
 
-  let pathCart = "/Cart";
+  //let pathCart = "/Cart";
 
   if (product) {
     return (
@@ -74,8 +74,8 @@ const ItemDetail = ({ product }) => {
               <h5 className="cantSelect">
                 Cantidad seleccionada: {contadorDetail}
               </h5>
-              <Link className="btn btn-danger m-3" to={pathCart}>
-                Terminar mi Compra
+              <Link className="btn btn-warning m-3" to="/Cart">
+                Ir al Carrito
               </Link>
             </Fragment>
           )}

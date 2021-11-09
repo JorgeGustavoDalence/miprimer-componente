@@ -19,7 +19,7 @@ function Buyer({errors}) {
                     <Field name={'email'} type={'email'} />
                     <small>{errors.email}</small>
                 </div>
-                <button className={'btn btn-success'} type={'submit'}> Submit
+                <button className={'btn btn-success'} type={'submit'}> Enviar
                 </button>
             </Form>
         </div>

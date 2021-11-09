@@ -4,37 +4,48 @@ import "../components/styles/App.css";
 
 const Contenido = () => {
   return (
-    <header className="App-header">
+    <div className="App-header">
       <Carousel variant="dark">
-        <Carousel.Item>
+        <Carousel.Item style={{
+        borderBottom: "0.50px solid #bf9f11",
+        
+      }}>
           <img
             className="d-block w-100"
             src="https://mooscle.com/app/uploads/2019/05/samsung_logo_black_background.png"
-            height="500"
-            width="1000"
+            height="300"
+            width="800"
             alt="logo samsung"
+            
           />
         </Carousel.Item>
-        <Carousel.Item>
+        <Carousel.Item style={{
+        borderBottom: "0.50px solid #bf9f11",
+        
+      }}>
           <img
+
             className="d-block w-100"
             src="https://img.unocero.com/2019/09/modo-oscuro-huawei.jpg"
-            height="500"
-            width="1000"
+            height="300"
+            width="800"
             alt="logo huawei"
           />
         </Carousel.Item>
-        <Carousel.Item>
+        <Carousel.Item style={{
+        borderBottom: "0.50px solid #bf9f11",
+       
+      }}>
           <img
             className="d-block w-100"
             src="https://logos-marcas.com/wp-content/uploads/2020/07/Asus-Emblema.jpg"
-            height="500"
-            width="1000"
+            height="300"
+            width="800"
             alt="logo asus"
           />
         </Carousel.Item>
       </Carousel>
-    </header>
+    </div>
   );
 };
 
