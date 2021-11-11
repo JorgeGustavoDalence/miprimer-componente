@@ -8,43 +8,38 @@ import Cart from "../Cart";
 import Footer from "../footer";
 import Contenido from "../Contenido";
 
-
 function AppRoutes() {
   return (
-    
-      <Router>
+    <Router>
       <header
-       style={{
-        position: "sticky",
-        top: "0px",   
-        width: "100%",
-        zIndex: 1,
-        
-      }}>
+        style={{
+          position: "sticky",
+          top: "0px",
+          width: "100%",
+          zIndex: 1,
+        }}
+      >
         <Container fluid>
           <NavBar />
           <h1 className="celu">CELUTIENDA</h1>
-        
         </Container>
       </header>
 
       <Switch>
         <Route exact path="/">
           <Container fluid>
-          <Contenido />
+            <Contenido />
             <ItemListContainer />
           </Container>
         </Route>
         <Route exact path="/categoria/:id">
-        <Contenido />
+          <Contenido />
           <ItemListContainer />
         </Route>
         <Route exact path="/item/:id">
-        
           <ItemDetailContainer />
         </Route>
         <Route exact path="/Cart">
-       
           <Cart />
         </Route>
       </Switch>
@@ -52,8 +47,6 @@ function AppRoutes() {
         <Footer />
       </Container>
     </Router>
-    
-    
   );
 }
 

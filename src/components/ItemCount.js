@@ -23,7 +23,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
           >
             -
           </button>
-          <h5 className="mx-5 btn btn-outline-light">{value}</h5>
+          <h3 className="mx-4 btn btn-outline-light">{value}</h3>
           <button
             className="btn btn-outline-light"
             type="button"

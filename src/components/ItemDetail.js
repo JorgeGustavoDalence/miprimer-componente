@@ -56,8 +56,9 @@ const ItemDetail = ({ product }) => {
     return (
       <div className="item-detail-container">
         <img
-          height="430"
-          width="530"
+          className="image-product"
+          height="430px"
+          width="530px"
           src={product.imgUrl}
           alt={product.title}
         />
@@ -65,7 +66,8 @@ const ItemDetail = ({ product }) => {
         <div className="description-container">
           <h1 className="title">{product.title}</h1>
           <h5 className="descripcion">Descripción: {product.descripcion}</h5>
-          <h5 className="precio">Precio: {product.precio}</h5>
+          <h5 className="precio">Precio: $ {product.precio}</h5>
+          <h6 className="seleccionarC">Seleccione cantidad:</h6>
           {contadorDetail === 0 && (
             <ItemCount stock={product.stock} initial={0} onAdd={onAdd} />
           )}

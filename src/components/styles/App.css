@@ -2,7 +2,7 @@
   text-align: center;
   color: #ffd000;
   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #bf9f11, 0 0 40px #bf9f11,
-    0 0 50px #bf9f11, 0 0 60px #bf9f11, 0 0 70px #bf9f11,  0 0 80px #bf9f11;
+    0 0 50px #bf9f11, 0 0 60px #bf9f11, 0 0 70px #bf9f11, 0 0 80px #bf9f11;
   text-transform: capitalize;
   padding-bottom: 20px;
   padding-top: 30px;
@@ -30,12 +30,12 @@ body {
 }
 
 .App-header {
-  position: static;
   height: 300px;
 }
-.textocarrito{
+.textocarrito {
   color: #bf9f11;
+  padding-top: 100px;
 }
-.itemlist{
+.itemlist {
   padding-top: 30px;
 }

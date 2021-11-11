@@ -33,7 +33,8 @@ const NavBar = (props) => {
               </NavLink>
             </li>
             <li className="nav-item dropdown">
-              <a href
+              <a
+                href
                 className="nav-link dropdown-toggle fontSize"
                 id="navbarDropdownMenuLink"
                 role="button"

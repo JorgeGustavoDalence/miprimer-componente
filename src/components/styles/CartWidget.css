@@ -1,6 +1,14 @@
-.carrito{
-    padding-left: 40px;
+.carrito {
+  padding-left: 40px;
 }
-.carroVacio{
-    padding-left: 40px;
+.carroVacio {
+  padding-top: 40px;
+  text-align: center;
+  color: #bf9f11;
+}
+@media screen and (max-width: 390px) {
+  .carro {
+    width: 430px;
+    height: auto;
+  }
 }

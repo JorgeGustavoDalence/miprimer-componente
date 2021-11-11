@@ -10,8 +10,8 @@ const Footer = () => {
             <div className="col-lg-6 col-md-12 mb-4 mb-md-0 text-start">
               <h5 className="text-uppercase">Sobre Nosotros</h5>
               <p>
-                TIENDACELU es una tienda que se dedica a la venta online de
-                celulares, un negocio reciente, pronto dispondremos de mas
+                CELUTIENDA es un negocio que se dedica a la venta online de
+                celulares, recientemente abierto, pronto dispondremos de mas
                 productos, accesorios, etc.
               </p>
             </div>

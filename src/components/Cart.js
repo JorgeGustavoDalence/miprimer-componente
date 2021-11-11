@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import RegistrarCompra from "./RegistrarCompra";
 import { ListGroup, ListGroupItem, Button } from "react-bootstrap";
-import { CgShoppingCart } from "react-icons/cg";
+import Contenido from "./Contenido";
 
 function Cart(props) {
   const { carrito, setCarrito, setContador, contador, handleShow } =
@@ -24,10 +24,7 @@ function Cart(props) {
     setCarrito(carritoProductos);
     let counter = 0;
     carritoProductos.map((item2) => {
-      return(
-        counter += item2.cantidad
-      )
-      
+      return (counter += item2.cantidad);
     });
 
     setContador(counter);
@@ -71,6 +68,7 @@ function Cart(props) {
             </button>
           )}
         </ul>
+
         <h3 className="text-light">
           Total: ${totalCarrito.reduce((prev, next) => prev + next)}
         </h3>
@@ -82,14 +80,16 @@ function Cart(props) {
     );
   } else {
     return (
-      <div className="carroVacio">
-        <CgShoppingCart className="cart m-1" />
-        <h1 className="text-light"> Carrito vacío!</h1>
-        <Link className={"btn btn-warning m-2"} to={"/"}>
-          {" "}
-          Seleccionar productos{" "}
-        </Link>
-      </div>
+      <>
+        <Contenido />
+        <div className="carroVacio">
+          <h1 className="text-light"> CARRITO VACIO!</h1>
+          <Link className={"btn btn-warning m-2"} to={"/"}>
+            {" "}
+            Seleccionar productos{" "}
+          </Link>
+        </div>
+      </>
     );
   }
 }
